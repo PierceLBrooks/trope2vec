@@ -34,7 +34,7 @@ python -m json.tool MediaTropes.json.json > Final.json
 python References.py Final.json Media.d.json Tropes.json Subpages.json.d
 # > Summaries.json
 python -m json.tool Summaries.py.json > Summaries.json
-# > models
+# > models/*
 python -m pip install -r requirements.txt
 python trope2vec.py --references=./References.py.json --summaries=./Summaries.json
 python
@@ -42,3 +42,4 @@ python
 >>> model = Word2Vec.load("./models/t2v-retrofit.model")
 >>> print(model.wv.most_similar("frog"))
 [('Hector', 0.9999973773956299), ('Speed', 0.9999970197677612), ('Brad', 0.9999969005584717), ('conversation', 0.9999968409538269), ('Nebula', 0.9999967813491821), ('Lieutenant', 0.9999967217445374), ('loose', 0.9999967217445374), ('bought', 0.9999967217445374), ('Mung', 0.9999967217445374), ('IN', 0.9999966621398926)]
+>>> # https://tvtropes.org/pmwiki/pmwiki.php/WesternAnimation/HectorsHouse
